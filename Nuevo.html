@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose E. Gutierrez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+        }
+        .presentation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        .presentation img {
+            max-width: 100%;
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .contact-info {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .details {
+            display: none;
+        }
+        a {
+            color: blue;
+        }
+        .details-button.active {
+            background-color: #333;
+            color: white;
+        }
+        ul {
+            margin-bottom: 2rem;
+        }
+    </style>
+    <script>
+        function toggleDetails(project) {
+            var details = document.getElementById(project + '-details');
+            var button = document.querySelector('.' + project + ' .details-button');
+
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+                button.textContent = 'Hide'; // Cambio de texto
+                button.classList.add('active'); // Agregamos clase para cambiar estilo
+            } else {
+                details.style.display = 'none';
+                button.textContent = 'Toggle Abstract'; // Cambio de texto de nuevo
+                button.classList.remove('active'); // Quitamos la clase para volver al estilo original
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Jose E. Gutierrez</h1>
+    </header>
+    <div class="container">
+        <div class="presentation">
+            <img src="C:\Users\Q32334\Desktop\JEG\Personal\Foto.png" alt="Mi Foto de Presentación">
+            <div class="contact-info">
+                <p>E-mail: josee.gutierrez@bde.es <br>
+                    Download my CV <a href="https://drive.google.com/file/d/1-BG1MT-kh5Nxh9xLifv4TyMSH6JnJJGP/view?usp=sharing">here</a></p>
+            </div>
+        </div>
+        <h2>About me</h2>
+        <p>
+            I am a Research Economist at the Financial Stability and Macroprudential Policy Department of <a href="https://www.bde.es/wbe/en/">Banco de España</a>.<br><br>
+            I received my Ph.D. in Economics from <a href="https://www.cemfi.es/">CEMFI</a>.<br><br>
+            My research interests are in Microeconomics and Finance, with a particular interest in banking-related topics.
+        </p>
+        <h2>Research</h2>
+        <h3>Working Papers</h3>
+        <ul>
+            <li class="project">
+                <h4>
+                    <a href="https://repositorio.bde.es/bitstream/123456789/25006/1/dt2245e.pdf">
+                        Stress tests, information disclosure, and credit line runs
+                    </a> (with Luis Fernandez Lafuerza)
+                </h4>
+                <button class="details-button project1" onclick="toggleDetails('project1')"> Abstract</button>
+                <div class="details" id="project1-details" style="display: none;">
+                    <p>
+                        Stress testing of banks is a tool widely used by supervisory authorities. The public disclosure of bank-level results provides valuable information to market participants, but it can entail adverse consequences for under-performing entities. We uncover a novel cost of disclosing stress test results in the form of credit line runs. Using the Spanish Credit Register and the 2011 stress test of the European Banking Authority, we find that, following the release of the results, firms drew down approximately 10 pp more available funds from lines granted by banks with a worse performance in the stress test. Moreover, before the release date, worse-performing banks reduced more the size of credit lines, and those underperformers with higher credit line balances were also more likely to cut term lending ex-post.
+                    </p>
+                </div>
+            </li>
+            <li class="project">
+                <h4>
+                    Optimal regulation of credit lines
+                </h4>
+                <button class="details-button" onclick="toggleDetails('project2')"> Abstract</button>
+                <div class="details" id="project2-details">
+                    <p>
+                        This paper presents a contract-theoretic model in which banks choose pre-arranged and ex-post funding to finance firms' liquidity needs through credit lines. In states with high liquidity needs, pre-arranged funding is key to sustaining lending and reducing the number of liquidated firms. Yet, in the presence of a pecuniary externality on firms' liquidation values, competitive banks choose insufficient pre-funding compared to a constrained social planner. Constrained efficiency can be restored using regulatory liquidity ratios. The optimal regulatory ratio depends on the frequency of high liquidity need states, the value lost after a firm liquidation, and the premium on pre-funding.
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <h3>Publication</h3>
+        <ul>
+            <li class="project">
+                <h4>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S151403261530009X#!">
+                        Regional inflation dynamics and inflation targeting: The case of Peru
+                    </a> (with Diego Winkelried)
+                </h4>
+                <p>
+                    <em>Journal of Applied Economics</em>, Volume 18, Issue 2, November 2015, Pages 199-224.
+                </p>
+            </li>
+        </ul>
+        <h3>Work in Progress</h3>
+        <ul>
+            <li> 
+                    Unloading NPLs, unlocking credit? Evidence from the ECB NPL Guidance (with Soner Baskaya, Jose-Maria Serena, and Serafeim Tsoukas)                
+	   </li>
+
+            <li> 
+                    Lending relationships and  the recognition of loan losses: Direct evidence from loan-level data (with Francisco Gonzalez and Jose-Maria Serena)                
+	   </li>
+        </ul>
+
+        <h2>Teaching</h2>
+
+	<h3>Instructor</h3>
+
+	<h3>Teaching Assistant</h3>
+        
+    </div>
+    <footer>
+        <p>&copy; 2023 by Jose E. Gutierrez
